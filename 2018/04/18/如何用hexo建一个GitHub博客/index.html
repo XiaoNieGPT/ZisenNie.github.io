@@ -17,7 +17,7 @@
 <meta property="og:description" content="一，用到的软件，平台：win7/8/10 git                 (分布式版本控制系统) node.js          (hexo 基于node.js) hexo            （框架）">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="//zisen.me/2018/04/18/如何用hexo建一个GitHub博客/11.png">
-<meta property="og:updated_time" content="2018-04-21T08:12:32.367Z">
+<meta property="og:updated_time" content="2018-04-21T08:16:45.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何用hexo建一个GitHub博客">
 <meta name="twitter:description" content="一，用到的软件，平台：win7/8/10 git                 (分布式版本控制系统) node.js          (hexo 基于node.js) hexo            （框架）">
@@ -207,23 +207,29 @@ var _hmt = _hmt || [];
 </ol>
 <a id="more"></a>
 <h4 id="二，安装上面的git，node-js-新建一个目录，右键git-bash，全局安装hexo。"><a href="#二，安装上面的git，node-js-新建一个目录，右键git-bash，全局安装hexo。" class="headerlink" title="二，安装上面的git，node.js,新建一个目录，右键git bash，全局安装hexo。"></a>二，安装上面的git，node.js,新建一个目录，右键git bash，全局安装hexo。</h4><blockquote>
-<p>git version                             #查看git版本</p>
-<p>node -v                                  #查看node.js 版本</p>
-<p>npm install hexo-cli -g           #全局安装hexo</p>
-<p>hexo v                                    #查看hexo版本</p>
+<ol>
+<li>git version                             #查看git版本</li>
+<li>node -v                                  #查看node.js 版本</li>
+<li>npm install hexo-cli -g        #全局安装hexo</li>
+<li>hexo v                                    #查看hexo版本</li>
+</ol>
 </blockquote>
 <hr>
 <h4 id="三，还是刚才的GIt-bash-输入"><a href="#三，还是刚才的GIt-bash-输入" class="headerlink" title="三，还是刚才的GIt bash,输入"></a>三，还是刚才的GIt bash,输入</h4><blockquote>
-<p>mkdir blog</p>
-<p>cd blog</p>
+<ol>
+<li>mkdir blog</li>
+<li>cd blog</li>
+</ol>
 </blockquote>
 <p>[^ ]: blog是文件夹名，cd 到文件夹下</p>
 <hr>
 <h4 id="四，初始化和测试，输入"><a href="#四，初始化和测试，输入" class="headerlink" title="四，初始化和测试，输入"></a>四，初始化和测试，输入</h4><blockquote>
-<p>hexo init              #初始化</p>
-<p>hexo install         #安装依赖包</p>
-<p>hexo g                 #生成静态网页</p>
-<p>hexo s                 #启动测试服务</p>
+<ol>
+<li>hexo init              #初始化</li>
+<li>hexo install         #安装依赖包</li>
+<li>hexo g                 #生成静态网页</li>
+<li>hexo s                 #启动测试服务</li>
+</ol>
 </blockquote>
 <p>Git bash提示打开 localhost:4000测试，浏览器打开就是了。</p>
 <p>如果你看到hello world ,你就成功一半了。</p>
@@ -232,21 +238,29 @@ var _hmt = _hmt || [];
 <hr>
 <h4 id="六，ssh-免密码连接仓库"><a href="#六，ssh-免密码连接仓库" class="headerlink" title="六，ssh 免密码连接仓库"></a>六，ssh 免密码连接仓库</h4><p>git bash 输入以下内容，一直回车，注意看.ssh/id_rsa.pub文件，打开获取公钥。</p>
 <blockquote>
-<p>ssh-keygen -C ‘你的注册邮箱’ -t rsa</p>
+<ol>
+<li>ssh-keygen -C ‘你的注册邮箱’ -t rsa</li>
+</ol>
 </blockquote>
 <p>去github setting-SSH and GPG keys 输入公钥，title随意</p>
 <blockquote>
-<p>git config –global user.name “你的用户名”<br>git config –global user.mail “你的邮箱”</p>
-<p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>          #测试连接，必须要！因为第一次ssh连接必须输入yes的！</p>
+<ol>
+<li>git config –global user.name “你的用户名”</li>
+<li>git config –global user.mail “你的邮箱”</li>
+<li>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>          #测试连接，必须要！因为第一次ssh连接必须输入yes的！</li>
+</ol>
 </blockquote>
 <hr>
 <h4 id="七，找一个你喜欢的主题，例子主题yilia"><a href="#七，找一个你喜欢的主题，例子主题yilia" class="headerlink" title="七，找一个你喜欢的主题，例子主题yilia"></a>七，找一个你喜欢的主题，例子主题yilia</h4><blockquote>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
-<p>vim _config.yml</p>
+<ol>
+<li>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</li>
+<li>vim _config.yml</li>
+</ol>
 </blockquote>
 <p>找到themes，修改成</p>
 <blockquote>
-<p>theme: yilia                       #注意有一个空格<br>exclude_generator:</p>
+<p>theme: yilia                       #注意有一个空格</p>
+<p>exclude_generator:</p>
 </blockquote>
 <p>找到deploy，修改成</p>
 <blockquote>
@@ -254,21 +268,25 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>然后删除之前的网页，编译，提交到GitHub。</p>
 <blockquote>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d           #如果出现ERROR Deployer not found: git，输入 npm install hexo-deployer-git –save</p>
+<ol>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li>hexo d           #如果出现ERROR Deployer not found: git，输入 npm install hexo-deployer-git –save</li>
+</ol>
 </blockquote>
 <p>打开你的博客，例如我的<a href="https://zisennie.github.io/，就可以看到新主题了" target="_blank" rel="noopener">https://zisennie.github.io/，就可以看到新主题了</a></p>
 <p>剩下的是修改一下信息，配置一下主题就好了。</p>
 <hr>
 <h4 id="ex，以下是常用hexo的命令，自己理解。"><a href="#ex，以下是常用hexo的命令，自己理解。" class="headerlink" title="ex，以下是常用hexo的命令，自己理解。"></a>ex，以下是常用hexo的命令，自己理解。</h4><blockquote>
-<p>heox new page “新建page”</p>
-<p>hexo new “新建页面”</p>
-<p>hexo g                      #完整命令为hexo generate,生成静态文件</p>
-<p>hexo s                      #完整命令为hexo server,启动服务器,本地可以测试</p>
-<p>hexo d                     #完整命令为hexo deploy,将本地编译好的静态文件发布到github上</p>
-<p>hexo n                     #完整命令为hexo new,新建一篇文章</p>
-<p>hexo clean              #清除当前项目的静态文件</p>
+<ol>
+<li>heox new page “新建page”</li>
+<li>hexo new “新建页面”</li>
+<li>hexo g                      #完整命令为hexo generate,生成静态文件</li>
+<li>hexo s                      #完整命令为hexo server,启动服务器,本地可以测试</li>
+<li>hexo d                     #完整命令为hexo deploy,将本地编译好的静态文件发布到github上</li>
+<li>hexo n                     #完整命令为hexo new,新建一篇文章</li>
+<li>hexo clean              #清除当前项目的静态文件</li>
+</ol>
 </blockquote>
 
       
@@ -429,11 +447,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">system.new.dat</a>
+                <a href="javascript:void(0)" class="js-tag color4">birthday</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">birthday</a>
+                <a href="javascript:void(0)" class="js-tag color5">system.new.dat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,11 +463,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">歌词</a>
+                <a href="javascript:void(0)" class="js-tag color1">日志,实习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">日志,实习</a>
+                <a href="javascript:void(0)" class="js-tag color3">歌词</a>
               </li>
              
               <li class="article-tag-list-item">
